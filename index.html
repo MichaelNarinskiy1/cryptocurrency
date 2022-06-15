@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:wght@200;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>My Crypto Project</title>
+  </head>
+  <body>
+    
+    <span class="text">Crypto Project</span>
+
+    
+    <div class="container">
+      <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" id="modaldialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">You can choose only 5 coins...</h5>
+            </div>
+            <div id="modalbody" class="text-bold modalus">
+Please choose coin to replace
+            </div>
+            <div class="modal-body d-flex flex-wrap" id="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn modal-btn btn-light" id="keepcurrent" data-dismiss="modal">Keep Current Coins</button>
+              <button id="clear-selected" class="btn clear-selected-modal shadow-sm form-block" type="button">Clear All Coins</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container">
+      <div class="active vertical-nav" id="sidebar">
+        <div class="py-4 px-3 mb-4">
+          <div class="media d-flex align-items-center">
+            <img src="img/bitcoin-btc-logo.png" width="70" class="rounded-circle img-thumbnail" />
+            <div class="media-body">
+              <h4 class="mt-3 ml-3 navb-color">Crypto Project</h4>
+            </div>
+          </div>
+        </div>
+        <p class="navb-color font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+        <ul class="nav flex-column mb-0">
+          <li class="nav-item" id="home">
+            <a href="#" class="nav-link ">
+              <i class="fa fa-home mr-3"></i>
+              Home
+            </a>
+          </li>
+          <li class="nav-item" id="about">
+            <a href="#" class="nav-link ">
+              <i class="fa fa-address-card mr-3"></i>
+              About
+            </a>
+          </li>
+          <li class="nav-item" id="live-report">
+            <a href="#" class="nav-link ">
+              <i class="fas fa-chart-line mr-3"></i>
+              Live Reports
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+  
+<div class="active page-content p-4" id="content">
+  
+  <button
+    id="sidebarCollapse"
+    type="button"
+    class="btn btn-warning sider-btn shadow-sm"
+  >
+    <i class="fa fa-bars mr-2"></i
+    ><small class="text-uppercase font-weight-bold">Menu</small>
+  </button>
+</div>
+
+
+
+    
+    <div class="container form-inline search-div">
+      <input
+        id="search-input"
+        class="form-control col-sm-3 search-i"
+        type="text"
+        placeholder="Search for coins..."
+      />
+      <button id="clear-search" class="bg-transparent" type="button">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="container form-block d-flex justify-content-center mt-3 mb-5">
+        </div>
+      <button
+      id="clear-selected"
+      class="btn shadow-sm clear-selected-modal form-block"
+      type="button"
+    >
+    <i class="fas fa-redo-alt"></i>
+    </button>
+    </div>
+    
+    <div id="about-div" class="container"></div>
+    
+    <div class="container" id="container">
+      <div id="errorMessage"></div>
+    
+      
+      <div id="chartContainer"></div>
+    
+      
+      <div class="main">
+        <div class="selectedCoinUI" style="height: 50px">
+          <span class="selectedCoins"
+            >Selected Coins : <span id="selectedCoins"></span
+          ></span>
+        </div>
+        <div
+          class="justify-content-center d-flex flex-wrap"
+          id="maincontainer"
+        ></div>
+      </div>
+    </div>
+    
+      
+      <div id="page-loader-animation" class="spinner-border text-light card-loader-animation"></div>
+      <button onclick="ScrollPageToTop()" id="scroll-up-btn" class="btn scrolltopbuttons pl-5 pr-5">
+        <i class="fa fa-arrow-up" id="arrow-up"></i>
+      </button>
+    </div>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
